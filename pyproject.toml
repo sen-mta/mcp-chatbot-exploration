@@ -1,0 +1,13 @@
+[project]
+name = "mcp-dl-exploration"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "arxiv>=2.2.0",
+    "gradio[mcp]>=5.30.0",
+    "mcp[cli]>=1.9.0",
+    "nest-asyncio>=1.6.0",
+    "smolagents[mcp]>=1.16.1",
+]
