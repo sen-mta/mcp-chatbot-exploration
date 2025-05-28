@@ -24,7 +24,7 @@ def test_query_processing(queries):
     for query, department in queries:
         start_time = time.time()
         try:
-            hasil = retrieve_relevant_content(query, department) 
+            retrieve_relevant_content(query, department) 
             # You might want to assert something about 'hasil' here 
             # to make this a real test (e.g., assert hasil is not None)
             end_time = time.time()

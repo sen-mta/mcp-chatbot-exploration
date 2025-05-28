@@ -1,10 +1,11 @@
 import logging
 import requests
-import uuid
-from datetime import datetime, timezone
+import time
+# import uuid
+# from datetime import datetime, timezone
 from typing import Dict, Any, Optional, Literal
 from mcp.server.fastmcp import FastMCP
-import json
+# import json
 import os
 from dotenv import load_dotenv
 load_dotenv()
@@ -19,8 +20,6 @@ mcp = FastMCP("hello", host="0.0.0.0", port=8050)
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
-
-import time
 
 @mcp.tool()
 def retrieve_relevant_content(
@@ -237,7 +236,7 @@ def submit_ticket(
     try:
         ticket_id = api_response_data['ticketing_id'] 
         status = api_response_data['status']
-        message = api_response_data['message']
+        # message = api_response_data['message']
     except KeyError as key_err:
         logger.error(
             f"API response from {ticketing_endpoint_url} is missing expected key: {key_err}. "
