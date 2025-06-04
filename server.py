@@ -51,7 +51,7 @@ def retrieve_relevant_content(
         logger.error(f"Validation failed - {error_msg}")
         raise ValueError(error_msg)
     
-    url = "https://chatbot-rag-retrieve-related-content-893090234023.us-central1.run.app"
+    url = "https://chatbot-rag-retrieve-related-content-893090234023.asia-southeast1.run.app"
     headers = {
         "Content-Type": "application/json",
         "X-API-KEY": cloud_run_api_key
@@ -120,7 +120,7 @@ def retrieve_content_by_chunk_index(
     # Log initial request
     logger.info(f"Chunk Retrieval - Document: '{document_id}', Chunks: {start_index}-{end_index}")
     
-    url = "https://chatbot-rag-retrieve-by-chunk-indexes-893090234023.us-central1.run.app"
+    url = "https://chatbot-rag-retrieve-by-chunk-indexes-893090234023.asia-southeast1.run.app"
     headers = {
         "Content-Type": "application/json",
         "X-API-KEY": cloud_run_api_key
